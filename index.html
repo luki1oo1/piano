@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Piano</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,9 +14,42 @@
         <div class="piano-container">
             <div class="black-belt"></div>
             <div class="buttons-container"></div>
-            <button class="play">play</button>
+            <button class="play btn btn--disabled">play</button>
+            <button class="pause btn btn--disabled">pause</button>
             <div class="audio-container">
                 <div class="audio"></div>
+            </div>
+            <div class="time"></div>
+        </div>
+        <div class="played-sounds">
+            <div class="list-header">
+                <h3>songs list</h3>
+            </div>
+            <table class="sounds-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="modal-overlay">
+            <div class="modal">
+                <div class="modal-head">
+                    <h3>Type Title</h3>
+                </div>
+                <div class="modal-body">
+                    <input type="text" placeholder="Type Title...">
+                </div>
+                <div class="buttons">
+                    <button class="save btn--disabled">Save</button>
+                </div>
             </div>
         </div>
     </div>
